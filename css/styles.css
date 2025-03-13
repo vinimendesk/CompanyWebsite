@@ -44,8 +44,24 @@ p {
     transition: 0.1s;
 }
 
+/*atribui uma animação para o botão*/
+.btn.animate-btn{
+    /*define que a animação será da classe "animate-outline" de 1 segundos do tipo que salta para fora.
+    "ease-ou"*/
+    animation: animate-outline 1s ease-out infinite;
+}
+
 .btn:hover {
     background-color: #3580db;
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #4f9bf98a;
+    }
+    to{
+        outline: 15px solid #4f9bf900;
+    }
 }
 
 header {
@@ -75,6 +91,22 @@ nav ul a {
     /*Ocupará toda a largura disponível, forçando o próximo elemento a ocupar a linha de baixo*/
     display: block;
 }
+
+/*Toda estilização ocorrerá após o elemento. E a todos os elementos de links (a) da nav e da lista(ul),
+menos os da classe btn*/
+nav ul a:not(.btn)::after{
+    content: "";
+    background-color: #4f9cf9;
+    margin: 0 auto;
+    display: block;
+    height: 3px;
+    width: 0%;
+    transition: 0.2s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
  
 .banner {
     display: flex;
@@ -82,11 +114,146 @@ nav ul a {
 }
 
 .banner .banner-text {
-    margin: 15;
-    text-align: 0 90px;
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
 }
 
-.banner .banner-text h1{
+.banner .banner-text h1 {
     font-size: 96px;
     color: white;   
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: #ffffffb7;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+/* faca mais */
+.faca-mais .container {
+    display: flex;
+    align-items: center;
+}
+
+.faca-mais .faca-mais-texto {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.faca-mais .faca-mais-texto h3 {
+    font-size: 56px;
+}
+
+.faca-mais .faca-mais-texto p {
+    margin: 5px 0 10px 0;
+}
+
+.faca-mais .faca-mais-img {
+    width: 50%;
+
+}
+
+.faca-mais .faca-mais-img img {
+    width: 100%;
+}
+
+.depoimentos h3 {
+    text-align: center;
+}
+
+.depoimentos p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+
+}
+
+.depoimentos .cards-item {
+    background-color: #d3e6fd;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.2s;
+}
+
+.depoimentos .cards-item img {
+    border-radius: 100px;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.depoimentos .cards-item .nome-user {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.depoimentos .cards-item .depoimentos-user {
+    font-size: 15px;
+    padding: 0 15px;
+    transition: 0.2s;
+}
+
+.depoimentos .cards-item .estrelas {
+    margin: 15px 0;
+    border-top: 2px solid #71767a23;
+}
+
+.depoimentos .cards-item .estrelas i {
+    color: #4f9cf9;
+    margin-top: 15px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.depoimentos .cards-item:hover {
+    background-color: #4f9cf9;
+    margin-top: -5px;
+}
+
+.depoimentos .cards-item:hover .nome-user, 
+.depoimentos .cards-item:hover .depoimentos-user,
+.depoimentos .cards-item:hover .estrelas i
+{
+    color: white;
+}
+
+/* Clientes */
+.clientes h3,
+.clientes p {
+    text-align: center;
+}
+
+.clientes .container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* footer */
+.footer {
+    background-color: #4f9cf9;
+    text-align: center;
+}
+
+.footer i {
+    color: #4f9cf9;
+    font-size: 19px;
+    background-color: white;
+    padding: 10px;
+    margin: 13px;
+    border-radius: 10px;
+}
+
+.footer p {
+    color: white;
+    margin-top: 10px;
 }
