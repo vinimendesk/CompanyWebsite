@@ -108,6 +108,20 @@ nav ul a:hover::after{
     width: 100%;
 }
  
+/* menu mobile */
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
 .banner {
     display: flex;
     justify-content: center;
@@ -256,4 +270,67 @@ nav ul a:hover::after{
 .footer p {
     color: white;
     margin-top: 10px;
+}
+
+/* página sobre */
+.sobre .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre .sobre-texto {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.sobre .sobre-texto p {
+    margin: 18px 0;
+    color: #000000a6;
+}
+
+.sobre .sobre-img {
+    width: 50%;
+}
+
+.sobre .sobre-img img {
+    width: 100%;
+}
+
+/* end página sobre */
+
+@media(max-width: 830px){
+    /* menu mobile */
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #184b88;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.5s;
+    }
+
+    ul.open {
+        clip-path: circle(141.2% at 100% 0);
+    }
+
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon{
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 32px;
+    }
 }
