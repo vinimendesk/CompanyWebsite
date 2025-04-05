@@ -413,7 +413,41 @@ nav .close-icon{
 
 .contato-info .right-side input{
     display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.2s;
+    border: 1px solid #f1f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+}
+
+/* Focus faz a estilização quando o elemento está pronto para interação, como teclado, mouse e afins */
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus{
+    border-color: #4f9cf9;
+}
+
+.contato-info .right-side textarea{
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.2s;
+    resize: none;
+}
+
+.contato-info .right-side input{
+    display: block;
     flex-direction: column;
+}
+
+.contato-info .right-side .btn{
+    border: none;
 }
 
 @media(max-width: 830px){
