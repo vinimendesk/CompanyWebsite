@@ -16,7 +16,7 @@ body {
 
 section,
 footer {
-    padding: 54px 0;
+    padding: 16px 0;
 }
 
 h3 {
@@ -134,7 +134,7 @@ nav .close-icon{
 }
 
 .banner .banner-text h1 {
-    font-size: 96px;
+    font-size: 86px;
     color: white;   
 }
 
@@ -300,21 +300,42 @@ nav .close-icon{
 
 /* end página sobre */
 /* página serivco */
-.servicos .container .rows-cards{
+
+.servicos .container h3{
     display: flex;
     justify-content: center;
+    margin: 10px 0 0 0;
+}
+
+.servicos .container p{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+.servicos .container .rows-cards{
+    display: flex;
+    /* 2 colunas de 1fr (1 unidade fracional) cada, ou seja, cada coluna ocupará 50% do espaço disponível */
+    /* 1fr significa que o espaço disponível será dividido em partes iguais entre as colunas.
+    grid-template-columns: repeat(2, 1fr);
+    /* margin de 20px entre linhas e 10px entre colunas 
+    gap: 20px 5px; */
+    justify-content: center;
     margin-top: 20px;
-    /* flex-wrap permite que os elementos se movam para a linha de baixo, 
-    caso não caibam na linha atual. Por padrão, flex-wrap é nowrap. */
-    flex-wrap: wrap;
+    /*  flex-wrap permite que os elementos se movam para a linha de baixo, 
+    caso não caibam na linha atual. Por padrão, flex-wrap é nowrap.
+    flex-wrap: wrap; */
 }
 
 .servicos .container .row-card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #d3e6fd;
-    width: 350px;
+    width: 500px;
     padding: 20px;
     border-radius: 14px;
-    margin: 20px;
+    margin: 10px;
     transition: 0.2s;
 }
 
@@ -334,6 +355,11 @@ nav .close-icon{
 .servicos .container .row-card-item p.descricao-servico{
     transition: 0.2s;
 }
+
+.servicos .container .row-card-item p.preco-servico{
+    margin: 5px 0;
+    transition: 0.2s;
+}   
 
 .servicos .container .row-card-item img{
     background-color: #4f9cf9;
