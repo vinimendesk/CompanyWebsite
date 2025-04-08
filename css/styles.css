@@ -583,6 +583,11 @@ nav .close-icon{
         justify-content: center;
     }
 
+    .servicos .servicos-texto{
+        width: 100%;
+        text-align: center;
+    }
+
     /* Página Contato Rersponsivo */
     .contato .contato-info{
         flex-direction: column-reverse;
