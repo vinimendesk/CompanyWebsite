@@ -564,7 +564,15 @@ nav .close-icon{
         font-size: 50px;
     }
 
+    .banner .banner-text h1{
+        font-size: 60px;
+    }
+
     .faca-mais .faca-mais-text{
+        font-size: 40px;
+    }
+
+    .depoimentos h3{
         font-size: 40px;
     }
 }
