@@ -253,6 +253,10 @@ nav .close-icon{
     justify-content: space-around;
 }
 
+.clientes .container div img{
+    width: 25%;
+}
+
 /* footer */
 .footer {
     background-color: #4f9cf9;
@@ -332,7 +336,8 @@ nav .close-icon{
     flex-direction: column;
     justify-content: space-between;
     background-color: #d3e6fd;
-    width: 500px;
+    min-width: 200px;
+    max-width: 100%;
     padding: 20px;
     border-radius: 14px;
     margin: 10px;
@@ -515,25 +520,23 @@ nav .close-icon{
     /* Página home responsivo */
     /* Quando definir order: 1 de um elemento filho dentro de um container pai com Display: flex. Significa que o elemento order 1 
     será exibido após o elemnto de order 0(padrão). */ 
-    .faca-mais .faca-mais-text{
+    .faca-mais .faca-mais-texto{
         margin-top: 10px;
         padding: 0 20px;
         order: 1;
+        font-size: 24px;
+        text-align: center;
     }
 
     .faca-mais .container{
         flex-direction: column;
     }
 
-    .faca-mais .faca-mais-text{
-        font-size: 48px;
+    .faca-mais .faca-mais-texto h3{
+        font-size: 36px;
     }
 
-    .faca-mais .faca-mais-text h3{
-        font-size: 48px;
-    }
-
-    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-texto,
     .faca-mais .faca-mais-img{
         width: 100%;
     }
@@ -543,14 +546,18 @@ nav .close-icon{
         margin: 80px;
     }
 
-    .banner .banner-text{
-        font-size: 80px;
+    .banner .banner-text h1{
+        font-size: 70px;
     }
 
     .depoimentos .cards-item{
         width: 100%;
     }
     
+    .btn {
+        font-size:  16px;
+    }
+
     /* Página sobre responsivo */
     .sobre .container{
         flex-direction: column-reverse;
@@ -561,12 +568,19 @@ nav .close-icon{
     }
 
     .sobre .sobre-img,
-    .sobre .sobre-text{
+    .sobre .sobre-texto{
         width: 100%;
+        text-align: center;
     }
 
-    .sobre .sobre-text{
+    .sobre .sobre-texto{
         margin-top: 40px;
+    }
+
+    /* Página Produto Responsivo */
+    .servicos .container .rows-cards{
+        flex-direction: column;
+        justify-content: center;
     }
 
     /* Página Contato Rersponsivo */
@@ -582,6 +596,12 @@ nav .close-icon{
     .contato-info .right-side{
         margin-bottom: 30px;
     }
+
+    .contato-info .right-side form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
 }
 
 @media(max-width:500px){
